@@ -1,0 +1,273 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	background-color: lightgray;
+}
+
+header {
+	background-color: #f4b942;
+	color: black;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: #0c719e;
+}
+
+.site-title {
+	margin: 0;
+	padding: 20px;
+}
+
+.navbar {
+  font-size: 22px;
+  background-color: #fff;
+}
+
+.navlist {
+	margin: 0;
+}
+
+
+.navitem {
+	display: inline-block;
+	text-align: center;
+}
+
+.navitem:hover {
+  background-color: rgba(244, 185, 66, 0.18);
+}
+
+.navitem a {
+  display: inline-block;
+  color: #454545;
+  padding: 10px 20px;
+}
+
+.navitem.navbar-search {
+	float: right;
+	margin-top:5px;
+}
+
+.active {
+	background-color: lightgray ;
+}
+.active:hover {
+	background-color: lightgray;
+}
+
+.home-page {
+  display: inline-block;
+  margin: 10px;
+  font-size: 30px;
+  color: #454545;
+}
+
+
+.error-page {
+  text-align: center;
+}
+
+.error-page h2 {
+  font-weight: 100;
+  font-size: 100px;
+  margin-bottom: 0;
+}
+
+.error-page h3 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.error-page {
+  text-align: center;
+}
+
+.error-page h2 {
+  font-weight: 100;
+  font-size: 100px;
+  margin-bottom: 0;
+}
+
+.error-page h3 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.equation-container{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5px;
+}
+
+.equation {
+	 flex: 1 32%;
+	background-color: #fff;
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: center;
+	margin: 5px;
+}
+
+.equation-text {
+	border: 2px solid #f4b942;
+	text-align: center;
+	padding: 5px;
+	padding-bottom: 3px;
+	border-radius: 10px;
+}
+
+.variable-list {
+	list-style-type: none;
+	text-align: center;
+	padding-left: 20px;
+}
+
+#add-equ-button {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  height: 60px;
+  width: 60px;
+  border: none;
+  border-radius: 30px;
+  font-size: 30px;
+  background-color: #f4b942;
+  color: black;
+  cursor: pointer;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+#add-equ-button:hover, #add-equ-button:focus {
+  right: 27px;
+  bottom: 27px;
+  height: 66px;
+  width: 66px;
+  border-radius: 33px;
+  font-size: 36px;
+}
+
+#add-equ-button:focus {
+	outline: none;
+}
+
+///////////////////////////////////////
+
+
+
+#modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+#add-equ-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+
+.modal-dialog {
+  width: auto;
+  max-width: 600px;
+  min-width: 350px;
+  min-height: 300px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.action-button {
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  background-color: #000;
+  border: 1px solid #ababab;
+  border-radius: 5px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #f4b942;
+  border-color: black;
+}
+
+.modal-header {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.modal-close-button {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal-body {
+	padding: 20px;
+}
+
+.equ-input-element {
+  display: flex;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.equ-input-element > label {
+  font-weight: 600;
+  flex: 1 0px;
+  margin-right: 10px;
+}
+
+.var-input-element {
+	flex-direction: column;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px 20px 10px;
+}
+
+#modal-cancel,
+#modal-accept {
+  margin-right: 20px;
+}
+
+#modal-cancel {
+  color: #333;
+  background-color: #fff;
+}
+
+#modal-cancel:hover {
+  background-color: #eee;
+}
+
+.hidden {
+  display: none;
+}
+
