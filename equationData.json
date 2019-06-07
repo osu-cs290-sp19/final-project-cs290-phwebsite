@@ -1,0 +1,124 @@
+{
+	"equations": {
+		"e": {
+
+			"equationContext": "",
+			"equationText": " ",
+			"variables": [
+					"",
+					"",
+					"",
+					""
+
+					],
+				"productSiUnits":
+				},
+
+		"e1": {
+
+			"equationContext": "kinematics",
+			"equationText": "(V_f)^2=(V_i)^2+2a(dx)",
+			"variables": [
+					"Vf = Final Velocity",
+					"Vi = Intial Velocity",
+					"a = Constant Acceleration",
+					"dx = Change in Distance"
+
+					],
+				"productSiUnits": "Meters/Seconds"
+				},
+
+		"e2": {
+
+			"equationContext": "kinematics",
+			"equationText": "V(t) = dr / dt",
+			"variables": [
+					"V = Velocity",
+					"dt = Change in Time",
+					"r = Change in Distance"
+
+					],
+				"productSiUnits": "Meters/Seconds"
+				},
+		"e3": {
+
+			"equationContext": "kinematics",
+			"equationText": " dx = (1/2)(V_i + V_f)dt",
+			"variables": [
+					"dx = Change in distance",
+					"Vf = Final Velocity",
+					"Vi = Intial Velocity",
+					"dt = Change in time"
+
+					],
+				"productSiUnits": "Meters"
+				},
+		"e4": {
+
+			"equationContext": "kinematics",
+			"equationText": " V_f = V_i + a(dt)",
+			"variables": [
+					"x = Distance",
+					"Vf = Final Velocity",
+					"Vi = Intial Velocity",
+					"a = Constant Acceleration",
+					"dt = Change in Time"
+
+					],
+				"productSiUnits": "Meters / Second"
+				},
+		"e5": {
+
+			"equationContext": "kinematics",
+			"equationText": "a_avg = dV / dt ",
+			"variables": [
+					"a avg = Average Acceleration over time period t",
+					"dV = Change in Velocity",
+					"dt = Change in Time"
+					
+
+					],
+				"productSiUnits": "Meters/Second/Second"
+				},
+		"e6": {
+
+			"equationContext": "kinematics",
+			"equationText": "V_avg = dr / dt ",
+			"variables": [
+					"V avg = Average Velocity over time period t",
+					"dr = Change in Distance",
+					"dt = Change in Time"
+					
+
+					],
+				"productSiUnits": "Meters/Seconds"
+				},
+		"e7": {
+
+			"equationContext": "kinematics",
+			"equationText": " a(t) =  dV /  dt ",
+			"variables": [
+					"a = Acceleration",
+					"dt = Change in Time",
+					"dV = Change in Velocity"
+
+					],
+				"productSiUnits": "Meters/Second/Seccond"
+				},
+
+	
+		"e8": {
+
+			"equationContext": "forces",
+			"equationText": " |F| = k|x|",
+			"variables": [
+					"f = Force",
+					"k = Spring Constant",
+					"x = Length of Spring"
+				
+					],
+				"productSiUnits": "Newtons"
+				},
+	
+			}
+	}
