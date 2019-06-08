@@ -96,7 +96,7 @@
 		"e7": {
 
 			"equationContext": "kinematics",
-			"equationText": " a(t) =  dV /  \\Delta t ",
+			"equationText": " a(t) =  \\Delta V /  \\Delta t ",
 			"variables": [
 					"a = Acceleration",
 					"t = Time",
