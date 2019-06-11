@@ -1,0 +1,12 @@
+<article class="equation">
+        <div class="equation-content">
+          <div class="equation-text">
+         <img src="http://latex.codecogs.com/svg.latex?" + {{equationText}} border="0"/>
+          </div>
+         <ul class="variable-list">
+        {{#each variables}}
+              {{> variablesTemplate}}
+            {{/each}}
+         </ul>
+        </div>
+      </article>
