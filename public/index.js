@@ -1,19 +1,16 @@
 
 
-var createNewEquation = document.getElementById('add-equ-button');
-createNewEquation.addEventListener('click', function(event){
-	event.stopPropagation();
+
+function showModal(){
+//	event.stopPropagation();
 	var modal = document.getElementById('add-equ-modal');
 	var backdrop = document.getElementById('modal-backdrop');
         modal.classList.remove('hidden');
 	backdrop.classList.remove('hidden');
-});
+}
 
-var cancel = document.getElementsByClassName('modal-cancel');
-var x = document.getElementsByClassName('modal-close-button');
-
-cancel[0].addEventListener('click', function(event) {
-        event.stopPropagation();
+function close() {
+//        event.stopPropagation();
         var equ = document.getElementById('equation-input');
         equ.value = "";
         var vari = document.getElementsByClassName('equ-var-input');
@@ -23,10 +20,10 @@ cancel[0].addEventListener('click', function(event) {
         var backdrop = document.getElementById("modal-backdrop");
         modal.classList.add('hidden');
         backdrop.classList.add('hidden');
- });
+ }
 
 
-x[0].addEventListener('click', function(event) {
+/*x[0].addEventListener('click', function(event) {
         event.stopPropagation();
         var equ = document.getElementById('equation-input');
         equ.value = "";
@@ -86,10 +83,71 @@ accept[0].addEventListener('click', function(event) {
         modal.classList.add('hidden');
         backdrop.classList.add('hidden');
 });
+*/
 
-var search = document.getElementById('navbar-search-button');
-search.addEventListener('click', function(event) {
-	event.stopPropagation();
+
+
+function getsubjectIdFromURL() {
+  var path = window.location.pathname;
+  var pathParts = path.split('/');
+  if (pathParts[1] === "subjects") {
+    return pathParts[2];
+  } else {
+    return null;
+  }
+}
+
+
+function handleModalAcceptClick() {
+  var variables = ["", "", "", ""];
+  var equation = document.getElementById('equation-input').value.trim();
+  var vars = document.getElementsByClassName('equ-var-input')
+  for(var i=0; i<vars.length; i++) {
+	variables[i] = vars[i].value.trim();
+  }
+  
+
+  if (!equation) {
+    alert("You must fill in the equation box!!");
+  } else {
+
+    var postRequest = new XMLHttpRequest();
+    var requestURL = '/subjects/' + getsubjectIdFromURL()  + '/addEqu';
+    postRequest.open('POST', requestURL);
+
+    var requestBody = JSON.stringify({
+      Equation: equation,
+      variables: variables
+    });
+
+    postRequest.addEventListener('load', function (event) {
+      if (event.target.status === 200) {
+        var equationsTemplate = Handlebars.templates.equationsTemplate;
+        var newEquationHTML = equationsTemplate({
+          Equation: equation,
+          variables: variables
+        });
+        var equationContainer = document.querySelector('.equation-container');
+        equationContainer.insertAdjacentHTML('beforeend', newEquationHTML);
+      } else {
+        alert("Error storing equation: " + event.target.response);
+      }
+    });
+
+    postRequest.setRequestHeader('Content-Type', 'application/json');
+    postRequest.send(requestBody);
+
+    close();
+
+  }
+
+}
+
+
+
+
+function search() {
+//	event.stopPropagation();
 	var searchInput = document.getElementById('navbar-search-input');
 	var arrayEqus = document.getElementsByClassName('equation');
 	var arrayEqusText = document.getElementsByClassName('equation-text');
@@ -100,6 +158,40 @@ search.addEventListener('click', function(event) {
 		else if (string1.includes(searchInput.value,45) === true){
                 arrayEqus[i].classList.remove('hidden');}
 		}
+}
+
+
+
+
+
+window.addEventListener('DOMContentLoaded', function () {
+
+  var createNewEquation = document.getElementById('add-equ-button');
+  if (createNewEquation) {
+	console.log("in add button function");
+    createNewEquation.addEventListener('click', showModal);
+  }
+
+  var accept = document.getElementsByClassName('modal-accept-button');
+  if (accept[0]) {
+    accept[0].addEventListener('click', handleModalAcceptClick);
+  }
+
+  var cancel = document.getElementsByClassName('modal-cancel-button');
+  if(cancel[0]) {
+	console.log("in cancel");
+	cancel[0].addEventListener('click', close);
+  }
+
+  var x = document.getElementsByClassName('modal-close-button');
+  if(x[0]) {
+	x[0].addEventListener('click', close);
+  }
+
+  var search = document.getElementById('navbar-search-button');
+  if(search) {
+	search.addEventListener('click', search);
+  }
+
+
 });
-
-
