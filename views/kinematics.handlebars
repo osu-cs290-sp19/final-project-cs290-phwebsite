@@ -1,0 +1,61 @@
+<header>
+      <a href="#"><h1 class="site-title">PH 211 Equations: Kinematics</h1></a>
+
+      <nav class="navbar">
+        <ul class="navlist">
+          <li class="navitem navlink active"><a href="/subjects/kinematics">Kinematics</a></li>
+          <li class="navitem navlink"><a href="/subjects/forces">Forces</a></li>
+          <li class="navitem navlink"><a href="/subjects/energy">Energy</a></li>
+          <li class="navitem navbar-search">
+            <input type="text" id="navbar-search-input" placeholder="Search...">
+            <button type="button" id="navbar-search-button"><i class="fas fa-search"></i></button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main class="equation-container">
+
+    {{#each equation}}
+	{{> equationsTemplate}}
+    {{/each}}	
+	
+    </main>
+
+
+    <button type="button" id="add-equ-button"><i class="fas fa-plus"></i></button>
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="add-equ-modal" class="hidden" >
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>Add an Equation</h3>
+          <button type="button" class="modal-close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="equ-input-element">
+            <label for="equation-input">Equation:</label>
+            <textarea id="equation-input"></textarea>
+          </div>
+          <div class="equ-input-element var-input-element">
+            <label for="equ-var-input">Variable 1</label>
+            <textarea class="equ-var-input"></textarea>
+            <label for="equ-var-input">Variable 2</label>
+            <textarea class="equ-var-input"></textarea>
+            <label for="equ-var-input">Variable 3</label>
+            <textarea class="equ-var-input"></textarea>
+            <label for="equ-var-input">Variable 4</label>
+            <textarea class="equ-var-input"></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-cancel action-button">Cancel</button>
+          <button type="button" class="modal-accept action-button">Add Equation</button>
+        </div>
+
+      </div>
+    </div>
