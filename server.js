@@ -74,10 +74,10 @@ app.post('/subjects/:subject/addEqu', function (req, res, next) {
 	variable3: req.body.variables[2],
 	variable4: req.body.variables[3]
     };
-    collection.updateOne(
-      { },
-      { $push: {equation} },
-      function (err, result) {
+    collection.insertOne(
+//	{/*equationContext: subject*/},
+	equation,
+	function (err, result) {
         if (err) {
           res.status(500).send({
             error: "Error inserting equation into DB"
