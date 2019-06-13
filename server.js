@@ -70,7 +70,10 @@ app.post('/subjects/:subject/addEqu', function (req, res, next) {
     var equation = {
 	equationContext: subject,     
     	equationText: req.body.Equation,
-        variables: req.body.variables
+        variable1: req.body.variables[0],
+	variable2: req.body.variables[1],
+	variable3: req.body.variables[2],
+	variable4: req.body.variables[3]
     };
     collection.updateOne(
       { },

@@ -125,7 +125,10 @@ function handleModalAcceptClick() {
         var equationsTemplate = Handlebars.templates.equationsTemplate;
         var newEquationHTML = equationsTemplate({
           Equation: equation,
-          variables: variables
+          variable1: variables[0],
+	  variable2: variables[1], 
+          variable3: variables[2],
+	  variable4: variables[3]
         });
         var equationContainer = document.querySelector('.equation-container');
         equationContainer.insertAdjacentHTML('beforeend', newEquationHTML);
