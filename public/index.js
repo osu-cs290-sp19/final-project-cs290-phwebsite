@@ -152,10 +152,12 @@ function handleModalAcceptClick() {
 
 
 function search() {
-//	event.stopPropagation();
+	console.log("search clicked");
+	event.stopPropagation();
 	var searchInput = document.getElementById('navbar-search-input');
 	var arrayEqus = document.getElementsByClassName('equation');
 	var arrayEqusText = document.getElementsByClassName('equation-text');
+	console.log(arrayEqusText);
 	for (var i = 0; i<arrayEqusText.length; i++){
 		var string1 = arrayEqusText[i].innerHTML;
 		if (string1.includes(searchInput.value,45) === false){
@@ -195,8 +197,21 @@ window.addEventListener('DOMContentLoaded', function () {
 
   var search = document.getElementById('navbar-search-button');
   if(search) {
-	search.addEventListener('click', search);
-  }
+	search.addEventListener('click', function() {
+        event.stopPropagation();
+        var searchInput = document.getElementById('navbar-search-input');
+        var arrayEqus = document.getElementsByClassName('equation');
+        var arrayEqusText = document.getElementsByClassName('equation-text');
+        for (var i = 0; i<arrayEqusText.length; i++){
+                var string1 = arrayEqusText[i].innerHTML;
+                if (string1.includes(searchInput.value,45) === false){
+                arrayEqus[i].classList.add('hidden');}
+                else if (string1.includes(searchInput.value,45) === true){
+                arrayEqus[i].classList.remove('hidden');}
+                }
 
+  	});
 
+   }
+       
 });
