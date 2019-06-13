@@ -49,14 +49,13 @@ app.get('/subjects/:subject', function (req, res, next) {
       next();
     } else {
       if(subject === "kinematics") {
-	console.log(equations);
-      	res.status(200).render('kinematics', equations);
+      	res.status(200).render('kinematics', {equations});
       }
       else if(subject === "forces") {
-        res.status(200).render('forces', equations);
+        res.status(200).render('forces', {equations});
       }
       else {
-        res.status(200).render('energy', equations);
+        res.status(200).render('energy', {equations});
       }
 	
     }

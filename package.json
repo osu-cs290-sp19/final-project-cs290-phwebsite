@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "handlebars views/partials/equationsTemplate.handlebars views/partials/variablesTemplate.handlebars -f public/fullTemp.js",
+    "build": "handlebars views/partials/equationsTemplate.handlebars -f public/fullTemp.js",
     "prestart": "npm run build"
   },
   "repository": {

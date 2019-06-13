@@ -124,12 +124,14 @@ function handleModalAcceptClick() {
       if (event.target.status === 200) {
         var equationsTemplate = Handlebars.templates.equationsTemplate;
         var newEquationHTML = equationsTemplate({
-          Equation: equation,
+          equationText: equation,
           variable1: variables[0],
 	  variable2: variables[1], 
           variable3: variables[2],
 	  variable4: variables[3]
         });
+	console.log("http://latex.codecogs.com/svg.latex?" + equation);
+	console.log(newEquationHTML);
         var equationContainer = document.querySelector('.equation-container');
         equationContainer.insertAdjacentHTML('beforeend', newEquationHTML);
       } else {
