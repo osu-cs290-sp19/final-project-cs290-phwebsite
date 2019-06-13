@@ -1,5 +1,5 @@
 "equations": {
-<<<<<<< HEAD:equationData.json
+
 			// "e": {
 
 			// "equationContext": "",
@@ -12,7 +12,7 @@
 			// 		],
 			// 	"productSiUnits": ""
 			// 	},
-=======
+
 		"e": {
 
 			"equationContext": "",
@@ -26,7 +26,7 @@
 					],
 				"productSiUnits":
 				},
->>>>>>> 9f2a4b60007673dcf5bcc42ef7a2ed58c23db808:equationData.JSON
+
 
 		"e1": {
 

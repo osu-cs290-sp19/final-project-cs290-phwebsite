@@ -1,45 +1,46 @@
 body {
-	font-family: 'Roboto', sans-serif;
-	margin: 0;
-	background-color: lightgray;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: white;
+  background-image: url("https://ctl.s6img.com/society6/img/0jv0y8_qckjz5qTXqbGPkkIhU0E/w_1500/coffee-mugs/swatch/~artwork,fw_4602,fh_1998,fx_-1367,fy_-1594,iw_7500,ih_7500/s6-original-art-uploads/society6/uploads/misc/dedc1bcf0997410ea69807a1101181a6/~~/physics-equations-mugs.jpg");
 }
 
 header {
-	background-color: #f4b942;
-	color: black;
+  background-color: #FF7F78;
+  color: black;
 }
 
 a {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: #AA160E;
 }
 
 a:hover {
-	color: #0c719e;
+  transition: width 3s;
+  color: #E54329;
 }
 
 .site-title {
-	margin: 0;
-	padding: 20px;
+  margin: 0;
+  padding: 20px;
 }
 
 .navbar {
   font-size: 22px;
-  background-color: #fff;
+  background-color: #FF7F78;
 }
 
 .navlist {
-	margin: 0;
+  margin: 0;
 }
 
 
 .navitem {
-	display: inline-block;
-	text-align: center;
+  display: inline-block;
+  text-align: center;
 }
-
 .navitem:hover {
-  background-color: rgba(244, 185, 66, 0.18);
+  background-color: #FF5136;
 }
 
 .navitem a {
@@ -48,23 +49,30 @@ a:hover {
   padding: 10px 20px;
 }
 
+
 .navitem.navbar-search {
-	float: right;
-	margin-top:5px;
+  float: right;
+  margin-top:5px;
 }
 
 .active {
-	background-color: lightgray ;
+  background-color: #B3504B ;
 }
 .active:hover {
-	background-color: lightgray;
+  background-color: #E54329;
 }
 
 .home-page {
+  text-align: center;
   display: inline-block;
   margin: 10px;
-  font-size: 30px;
-  color: #454545;
+  font-size: 40px;
+  color: #FF7F78;
+  text-shadow:
+      0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
 }
 
 
@@ -99,33 +107,33 @@ a:hover {
 }
 
 .equation-container{
-	display: flex;
-	flex-wrap: wrap;
-	padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
 }
 
 .equation {
-	 flex: 1 32%;
-	background-color: #fff;
-	border: 2px solid black;
-	border-radius: 10px;
-	padding: 10px;
-	text-align: center;
-	margin: 5px;
+   flex: 1 32%;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  margin: 5px;
 }
 
 .equation-text {
-	border: 2px solid #f4b942;
-	text-align: center;
-	padding: 5px;
-	padding-bottom: 3px;
-	border-radius: 10px;
+  border: 2px solid #f4b942;
+  text-align: center;
+  padding: 5px;
+  padding-bottom: 3px;
+  border-radius: 10px;
 }
 
 .variable-list {
-	list-style-type: none;
-	text-align: center;
-	padding-left: 20px;
+  list-style-type: none;
+  text-align: center;
+  padding-left: 20px;
 }
 
 #add-equ-button {
@@ -137,7 +145,7 @@ a:hover {
   border: none;
   border-radius: 30px;
   font-size: 30px;
-  background-color: #f4b942;
+  background-color: #AA160E;
   color: black;
   cursor: pointer;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
@@ -153,7 +161,7 @@ a:hover {
 }
 
 #add-equ-button:focus {
-	outline: none;
+  outline: none;
 }
 
 ///////////////////////////////////////
@@ -228,7 +236,7 @@ a:hover {
 }
 
 .modal-body {
-	padding: 20px;
+  padding: 20px;
 }
 
 .equ-input-element {
@@ -244,7 +252,7 @@ a:hover {
 }
 
 .var-input-element {
-	flex-direction: column;
+  flex-direction: column;
 }
 
 .modal-footer {
